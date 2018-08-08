@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>練習 html 語法</title>
+        <style>
+            #nine_bro{
+                color: #icc-color(name, 0);
+            }
+            p{
+                color: red;
+                font-size: 40px;
+            }
+            .xxx{
+                color: green;
+            }
+            a{
+                /*移除超連結底線*/
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>標題：周杰倫</h1>
+        <h2>次標題</h2>
+        <p class="xxx" id="nine_bro">
+            &lt;html&gt;我想要顯示左邊的html，他不是語法！
+            這邊練習超連結<a href="https://www.google.com" target="_blank" title="開新 google 視窗">google it!</a>
+            <!-- 小知識4：lorem+數字+Tab鍵
+            自動生成你要的數字量的內文
+            -->
+        </p>
+        <ul>無序清單抬頭
+            <li><em>這是em，Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima ullam molestiae, laudantium suscipit. Voluptatibus numquam reprehenderit minima quia blanditiis?</em></li>
+            <li><i>這是i，國國國</i></li>
+            <li><strong>然後這是strong，國國國</strong></li>
+            <li><b>最後這是b，國國國</b></li>
+        </ul>
+        <ol>有序抬頭
+            <li>有序清單</li>
+            <li>有序清單</li>
+        </ol>
+        <table>
+            <th>欄位標題在這</th>
+            <tr>
+                <td>這</td>
+                <td>是</td>
+            </tr>
+            <tr>
+                <td>不</td>
+                <td>同</td>
+            </tr>
+            <tr>
+                <td>的</td>
+                <td>一</td>
+                <td>列</td>
+            </tr>
+        </table>
+        <form>
+            <!-- 標籤取名，讓你點了姓名，就自動跳到輸入框 -->
+            <p style="color: blue">
+                <label for="user_name">姓名</label>
+                <input type="text" name="user_name" id="user_name">
+                <!-- label 是 form 的標籤 -->
+                <!-- 早期瀏覽器有些吃 name 有些吃 id -->
+                <!-- 所以 name 跟 id 通常會設一樣 -->
+            </p>
+            <p>
+                <!-- radio = 圓形 -->
+                <label for="boy">性別</label>
+                <input type="radio" name="sex" id="boy">男
+                <label>
+                    <input type="radio" name="sex" id="girl">
+                    女
+                </label>
+            </p>
+            <p>
+                興趣
+                <label>
+                    <input type="checkbox" name="">釣魚
+                </label>
+                <label>
+                    <input type="checkbox" name="">看電影
+                </label>
+                <label>
+                    <input type="checkbox" name="">敗家
+                </label>
+            </p>
+            <p>
+                <label for="msg">留言</label>
+                <textarea name="msg" id="msg" rows="10">這裡輸入文字</textarea>
+            </p>
+        </form>
+        <p>
+            <!-- 按鈕只是個按下去有反應的東西 -->
+            <button>按鈕們</button>
+            <input type="button" name="" value="我是按鈕">
+            <!-- submit：會送出資料到伺服器 -->
+            <input type="submit" name="" value="我是送出">
+        </p>
+        <!-- p*20>lorem -->
+        <p>以下演練 sublime 快速產生２０個段落的測試文字</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quos recusandae in delectus culpa voluptate eveniet, officiis dolorum qui optio quis voluptas ipsum accusantium, vel eligendi quisquam sit adipisci vitae?</p>
+        <figure>
+            <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
+            <figcaption>圖片描述：放”假圖”＝fakeimg+ tab</figcaption>
+        </figure>
+
+    </body>
+</html>
