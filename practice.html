@@ -3,38 +3,88 @@
     <head>
         <meta charset="UTF-8">
         <title>練習 html 語法</title>
+        <!-- link tag: 引用 external css stylesheet from w3schools.com: -->
+        <!-- <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css"> -->
         <style>
-            #nine_bro{
-                color: #icc-color(name, 0);
-            }
-            p{
-                color: red;
-                font-size: 40px;
-            }
-            .xxx{
-                color: green;
-            }
-            a{
-                /*移除超連結底線*/
-                text-decoration: none;
-            }
+        body {
+        background-image: url("images/張大千_灊霍瑞靄.jpeg");
+        background-size: 100%;
+        background-attachment: fixed;
+        background-repeat:  repeat-y;
+        background-color:  lightgray;
+        }
+        table#t01 tr:nth-child(even) {
+        background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+        background-color: #fff;
+        }
+        table#t01 th {
+        color: white;
+        background-color: black;
+        }
+        #nine_bro{
+        color: #icc-color(name, 0);
+        font-family: Microsoft JhengHei
+        }
+        p{
+        color: powderblue;
+        font-size: 40px;
+        }
+        .xxx{
+        color: black;
+        }
+        a{
+        /*移除超連結底線*/
+        text-decoration: none;
+        }
+        /* ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+        }
+        li {
+        float: left;
+        }
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+        }
+        li a:hover {
+        background-color: #111111;
+        } */
         </style>
     </head>
     <body>
-        <h1>標題：周杰倫</h1>
+        <h1>守破離</h1>
         <h2>次標題</h2>
         <p class="xxx" id="nine_bro">
-            &lt;html&gt;我想要顯示左邊的html，他不是語法！
+            &lt;html&gt;顯示左邊的html,他不是語法！
             這邊練習超連結<a href="https://www.google.com" target="_blank" title="開新 google 視窗">google it!</a>
             <!-- 小知識4：lorem+數字+Tab鍵
             自動生成你要的數字量的內文
             -->
+            <h1 style="width:50%;background-color:Tomato;">Tomato</h1>
+            <h1 style="width:55%;background-color:Orange;">Orange</h1>
+            <h1 style="width:60%;background-color:DodgerBlue;">DodgerBlue</h1>
+            <h1 style="width:65%;background-color:MediumSeaGreen;">MediumSeaGreen</h1>
+            <h1 style="width:60%;background-color:Gray;">Gray</h1>
+            <h1 style="width:55%;background-color:SlateBlue;">SlateBlue</h1>
+            <h1 style="width:50%;background-color:Violet;">Violet</h1>
+            <h1 style="width:45%;background-color:LightGray;">LightGray</h1>
         </p>
         <ul>無序清單抬頭
             <li><em>這是em，Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima ullam molestiae, laudantium suscipit. Voluptatibus numquam reprehenderit minima quia blanditiis?</em></li>
             <li><i>這是i，國國國</i></li>
             <li><strong>然後這是strong，國國國</strong></li>
-            <li><b>最後這是b，國國國</b></li>
+            <li><b>這是b，國國國</b></li>
+            <li>這是&lt;ins&gt;<ins>插入文字</ins></li>
+            <li>and then &lt;mark&gt;, <mark>marked text</mark></li>
         </ul>
         <ol>有序抬頭
             <li>有序清單</li>
@@ -56,55 +106,79 @@
                 <td>列</td>
             </tr>
         </table>
-        <form>
-            <!-- 標籤取名，讓你點了姓名，就自動跳到輸入框 -->
-            <p style="color: blue">
-                <label for="user_name">姓名</label>
-                <input type="text" name="user_name" id="user_name">
-                <!-- label 是 form 的標籤 -->
-                <!-- 早期瀏覽器有些吃 name 有些吃 id -->
-                <!-- 所以 name 跟 id 通常會設一樣 -->
-            </p>
+        <div id="nine_bro" style="text-align:center;background-color:cadetblue;width:90%;">
+            <form>
+                <!-- 標籤取名，讓你點了姓名，就自動跳到輸入框 -->
+                <p style="color:blue; text-align:center">
+                    <label for="user_name" style="font-family: Microsoft JhengHei">姓名</label>
+                    <br />
+                    <input type="text" name="user_name" id="user_name">
+                    <!-- label 是 form 的標籤 -->
+                    <!-- 早期瀏覽器有些吃 name 有些吃 id -->
+                    <!-- 所以 name 跟 id 通常會設一樣 -->
+                </p>
+                <p>
+                    <!-- type="radio" = 圓形 -->
+                    <label for="boy">性別</label>
+                    <input type="radio" name="sex" id="boy">男
+                    <label>
+                        <input type="radio" name="sex" id="girl">
+                        女
+                    </label>
+                </p>
+                <p>
+                    興趣
+                    <label>
+                        <input type="checkbox" name="">釣魚
+                    </label>
+                    <label>
+                        <input type="checkbox" name="">看電影
+                    </label>
+                    <label>
+                        <input type="checkbox" name="">敗家
+                    </label>
+                </p>
+                <p>
+                    <label for="msg">留言</label>
+                    <textarea name="msg" id="msg" rows="10">這裡輸入文字</textarea>
+                </p>
+            </form>
             <p>
-                <!-- radio = 圓形 -->
-                <label for="boy">性別</label>
-                <input type="radio" name="sex" id="boy">男
-                <label>
-                    <input type="radio" name="sex" id="girl">
-                    女
-                </label>
+                <!-- 按鈕只是個按下去有反應的東西 -->
+                <button>好大的按鈕們</button>
+                <input type="button" name="" value="我是按鈕">
+                <!-- submit：會送出資料到伺服器 -->
+                <input type="submit" name="" value="我是送出">
             </p>
-            <p>
-                興趣
-                <label>
-                    <input type="checkbox" name="">釣魚
-                </label>
-                <label>
-                    <input type="checkbox" name="">看電影
-                </label>
-                <label>
-                    <input type="checkbox" name="">敗家
-                </label>
-            </p>
-            <p>
-                <label for="msg">留言</label>
-                <textarea name="msg" id="msg" rows="10">這裡輸入文字</textarea>
-            </p>
-        </form>
-        <p>
-            <!-- 按鈕只是個按下去有反應的東西 -->
-            <button>按鈕們</button>
-            <input type="button" name="" value="我是按鈕">
-            <!-- submit：會送出資料到伺服器 -->
-            <input type="submit" name="" value="我是送出">
-        </p>
+        </div>
         <!-- p*20>lorem -->
-        <p>以下演練 sublime 快速產生２０個段落的測試文字</p>
+        <p>以下演練 sublime 快速產生２０個段落的測試文字: `p*20>lorem + tab` </p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quos recusandae in delectus culpa voluptate eveniet, officiis dolorum qui optio quis voluptas ipsum accusantium, vel eligendi quisquam sit adipisci vitae?</p>
         <figure>
             <img src="https://api.fnkr.net/testimg/350x200/00CED1/FFF/?text=img+placeholder">
             <figcaption>圖片描述：放”假圖”＝fakeimg+ tab</figcaption>
         </figure>
-
+        <table style="width:60%;" id="t01">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+        </table>
     </body>
 </html>
