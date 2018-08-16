@@ -62,18 +62,19 @@
         </style>
     </head>
     <body>
-        <div id="navigation_menu" style="position: sticky; width: 100%; top: 0">
+        <nav id="navigation_bar" style="position: sticky; width: 100%; top: 0">
             <ul id="u01">
                 <li id="u01"><a href="#home">Home</a></li>
-                <li id="u01"><a href="#nine_bro">Contact</a></li>
-                <li id="u01"><a href="#About">About</a></li>
+                <li id="u01"><a href="#html_color_section">Color</a></li>
+                <li id="u01"><a href="#contact_input">Contact</a></li>
+                <li id="u01"><a href="A grouped pure CSS parallax demo by Keith Clark.htm">Parallax demo</a></li>
             </ul>
-        </div>
+        </nav>
         <div id="home" >
             <br />
             <h1 style="font-family: Kaiti TC; font-size:72px;">守破離</h1>
             <h2>次標題</h2>
-            <p class="html_color_section" id="nine_bro">
+            <p id="html_color_section" id="nine_bro">
                 HTML colors be like:
                 <!-- 小知識4：lorem+數字+Tab鍵
                 自動生成你要的數字量的內文
@@ -116,10 +117,11 @@
                 </tr>
             </table>
         </div>
-        <div id="contact" class="nine_bro" style="text-align:center;position: absolute; right: 50%;">
-            <form style="background-color:cadetblue;">
+        <div id="contact_input" class="nine_bro" style="text-align:center;float: left;background-color:cadetblue;">
+            <br>
+            <form style="background-color:dodgerblue;">
                 <!-- 標籤取名，讓你點了姓名，就自動跳到輸入框 -->
-                <p id="name_info_input" style="color:blue; text-align:center">
+                <p id="name_info_input" style="color:#c3c3c3; text-align:center">
                     <label for="user_name" style="font-family: Microsoft JhengHei">姓名</label>
                     <input type="text" name="user_name" id="user_name" style="height: 120%">
                     <!-- label 是 form 的標籤 -->
@@ -164,7 +166,7 @@
                 <input type="submit" name="" value="我是送出">
             </p>
         </div>
-        <div>
+        <div id="lorem" style="float:left;width:50%;background:grey;">
             <!-- p*20>lorem -->
             <p>以下演練 sublime 快速產生２０個段落的測試文字: `p*20>lorem + tab` </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quos recusandae in delectus culpa voluptate eveniet, officiis dolorum qui optio quis voluptas ipsum accusantium, vel eligendi quisquam sit adipisci vitae?</p>
